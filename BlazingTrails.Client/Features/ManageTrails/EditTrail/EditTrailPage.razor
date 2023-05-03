@@ -56,7 +56,7 @@ else
             _trail.Route.AddRange(response.Trail.RouteInstructions.Select(ri => new TrailDto.RouteInstruction
                 {
                     Stage = ri.Stage,
-                    Descrip = ri.Description
+                    Description = ri.Description
                 }));
         }
         else
@@ -87,13 +87,13 @@ else
 
                 {
                     Stage = ri.Stage,
-                    Descrip = ri.Descrip
+                    Description = ri.Description
                 }));
 
             _submitSuccessful = true;
 
-            if (trail.ImageAction == TrailDto.ImageActions.Add) _submitSuccessful = await ProcessImage(trail.Id, image!);
-            if (trail.ImageAction == TrailDto.ImageActions.Remove) _trail.Image = null;
+            if (trail.ImageAction == ImageAction.Add) _submitSuccessful = await ProcessImage(trail.Id, image!);
+            if (trail.ImageAction == ImageAction.Remove) _trail.Image = null;
         }
 
         StateHasChanged();

@@ -22,9 +22,6 @@
 	</ItemGroup>
 
 	<ItemGroup>
-		<Folder Include="Features\ManageTrails\AddTrail\" />
-		<Folder Include="Features\ManageTrails\EditTrail\" />
-		<Folder Include="Features\ManageTrails\Shared\" />
 		<Folder Include="Images\" />
 		<Folder Include="Persistence\Data\" />		
 	</ItemGroup>

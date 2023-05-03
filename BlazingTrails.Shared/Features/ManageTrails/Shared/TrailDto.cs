@@ -9,27 +9,27 @@ namespace BlazingTrails.Shared.Features.ManageTrails.Shared
         public string Description { get; set; } = "";
         public string Location { get; set; } = "";
         public string? Image { get; set; }
-        public ImageActions ImageAction { get; set; }
+        public ImageAction ImageAction { get; set; }
         public int TimeInMinutes { get; set; }
         public int Length { get; set; }
         public List<RouteInstruction> Route { get; set; } = new List<RouteInstruction>();
 
-        public enum ImageActions
-        {
-            None,
-            Add,
-            Remove
-        }
+       
 
         
 
         public class RouteInstruction
         {
             public int Stage { get; set; }
-            public string Descrip { get; set; } = "";
+            public string Description { get; set; } = "";
         }
     }
-
+    public enum ImageAction
+    {
+        None,
+        Add,
+        Remove
+    }
     public class TrailValidator : AbstractValidator<TrailDto>
     {
         public TrailValidator()
@@ -48,7 +48,7 @@ namespace BlazingTrails.Shared.Features.ManageTrails.Shared
         public RouteInstructionValidator()
         {
             RuleFor(x => x.Stage).NotEmpty().WithMessage("Please enter a stage");
-            RuleFor(x => x.Descrip).NotEmpty().WithMessage("Please enter a route instruction description");
+            RuleFor(x => x.Description).NotEmpty().WithMessage("Please enter a route instruction description");
         }
     }
 }
