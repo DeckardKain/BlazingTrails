@@ -21,6 +21,7 @@
 
 	<ItemGroup>
 		<Watch Include="**/*.scss" />
+		<Watch Remove="Features\Home\Shared\HomePage.razor.scss" />
 		<Watch Remove="Features\ManageTrails\InputTime.razor.scss" />
 		<None Update="**/*.css" Watch="false" />
 	</ItemGroup>
