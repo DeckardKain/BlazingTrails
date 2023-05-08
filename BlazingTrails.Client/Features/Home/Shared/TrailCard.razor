@@ -23,6 +23,6 @@
 @code {
     [Parameter, EditorRequired]
     public Trail Trail { get; set; } = default!;
-    [Parameter]
+    [Parameter, EditorRequired]
     public EventCallback<Trail> OnSelected { get; set; }
 }
