@@ -14,7 +14,7 @@ public class Trail
     public int TimeInMinutes { get; set; }
     public int Length { get; set; }
     // Creates a one to many relationship between a trail and routeinstructions
-    public ICollection<RouteInstruction> Route { get; set; } = default!;
+    public ICollection<Waypoint> Waypoints { get; set; } = default!;
 }
 
 public class TrailConfig : IEntityTypeConfiguration<Trail>
